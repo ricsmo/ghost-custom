@@ -395,6 +395,9 @@ module.exports = class StripeAPI {
             allow_promotion_codes: discounts ? undefined : this._config.enablePromoCodes,
             metadata,
             discounts,
+            automatic_tax: {
+                enabled: true
+            },
             /*
             line_items: [{
                 price: priceId
